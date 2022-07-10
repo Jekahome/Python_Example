@@ -66,6 +66,11 @@ def print_person(name, /, age, company="Microsoft"):
 print_person("Tom", company="JetBrains", age = 24)     # Name: Tom  Age: 24  company: JetBrains
 print_person("Bob", 41)                 # Name: Bob  Age: 41  company: Microsoft
 
+# все параметры именнованные
+def print_person(*,  name, age, company):
+    print(f"Name: {name}  Age: {age}  Company: {company}")
+print_person(name="Bob", age = 41, company ="Microsoft")     
+    
 # Неопределенное количество параметров
 def sum(*numbers):
     result = 0
