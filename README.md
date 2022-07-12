@@ -1,5 +1,18 @@
 ### Learn Python
 
+```
+Alias python3
+
+
+$ sudo nano ~/.bash_profile
+alias python=python3
+
+$ source ~/.bash_profile
+
+Или
+sudo ln -s /usr/bin/python3 python
+```
+
 ### Base 
 
 ```
