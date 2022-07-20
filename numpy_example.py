@@ -1,7 +1,8 @@
 
 import numpy as np
 # https://numpy.org/doc/stable/reference/generated/numpy.set_printoptions.html
- 
+# https://machinelearningmastery.ru/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54/
+
 '''
 [ [[0 ,0 ,0],[0 ,0 ,0]], [[0 ,0 ,0],[0 ,0 ,0]] ]
 
@@ -54,17 +55,62 @@ def create_narray():
 Базовые операции
 сложение вычетания деление минимум максимум ...
 
-img.copy()
+np.append() - вставка в конец
+np.delete() - удаление по индексу
+np.sort() - сортировка
+    
+img.copy() - копия
+
+img.sum
+img.min
+img.max
+
+Разбиение массива:
+np.hstack
+np.row_stack
+np.column_stack
+np.column_stack
+
+Объединение массивов:
+np.hstack
+np.row_stack
+np.column_stack
+np.column_stack
 
 '''
 def base_perations_narray():
-    # размеры массивов равны ---------------------------------------------------
+    
+    '''
+    ndarray.ndim() - количество осей или размеров массива
+    ndarray.size() - общее количество элементов массива
+    ndarray.shape() - количество элементов, хранящихся вдоль каждого измерения массива
+    '''
+    a = np.array([20, 30, 40, 50])
+    _ = a.ndim # 1
+   
+    
+    # размеры массивов при этом должны быть равны
     a = np.array([20, 30, 40, 50])
     b = np.arange(4) # [0,  1, 2, 3]
     res = a + b      # [20 31 42 53]
     res = res - b    # [20,30,40 50]
     res = res * np.array([2, 2, 2, 2]) # [40,60,80,100]
     res = res / np.array([2, 2, 2, 2]) # [20. 30. 40. 50.]  type(res[0]) == numpy.float64
+    
+    '''
+    np.append()
+    np.delete()
+    np.sort()    
+    
+    Еще сортировки:
+    argsort - непрямая сортировка по указанной оси
+    lexsort - непрямая стабильная сортировка по нескольким ключам
+    searchsorted - будет найти элементы в отсортированном массиве
+    '''
+    a = np.array([20, 30, 40, 50])
+    a = np.append(a, [1,2]) # [20 30 40 50 1 2]
+    a = np.delete(a,0) # [30 40 50 1 2]
+    a = np.sort(a) # [1 2 30 40 50]
     
     # Поверностная копия -----------------------------------------------------------
     a = np.ones((2, 2, 3), dtype=np.uint8)
@@ -95,6 +141,10 @@ def base_perations_narray():
     _ = np.array([20, 3, 14, 5]).min() # Минимальный елемент = 3
     _ = np.array([20, 3, 14, 5]).max() # Максимальный елемент = 20
     
+    '''
+        np.hsplit
+        np.vsplit
+    '''
     # Разбиение массива --------------------------------------------------------
     img = np.array( [
         [np.array([1,  2,  3]),  
