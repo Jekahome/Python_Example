@@ -66,10 +66,17 @@ def base_perations_narray():
     res = res * np.array([2, 2, 2, 2]) # [40,60,80,100]
     res = res / np.array([2, 2, 2, 2]) # [20. 30. 40. 50.]  type(res[0]) == numpy.float64
     
-    # Глубокая копия -----------------------------------------------------------
+    # Поверностная копия -----------------------------------------------------------
     a = np.ones((2, 2, 3), dtype=np.uint8)
     b = a.copy()
-
+    # ndarray.view() метод не создает копию он только позволяет создать другую формы тех же данных
+    
+    # Глубокая копия -----------------------------------------------------------
+    # https://pythonworld.ru/moduli/modul-copy.html
+    import copy
+    a = np.ones((2, 2, 3), dtype=np.uint8)
+    b = copy.deepcopy(a)
+ 
     # массив и число -----------------------------------------------------------
     '''
         sum
@@ -308,8 +315,8 @@ def random_example():
     print(a)
         
 # ---------------------------------------------------------------------------------        
-# base_perations_narray()
+base_perations_narray()
 # create_slice()
-random_example()
+# random_example()
 
  
