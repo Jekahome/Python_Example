@@ -7,12 +7,19 @@ items
 keys
 values
 '''
+from operator import itemgetter
+
+
 objects = dict()
 objects = {}
 objects = {1: "Tom", 2: "Bob", 3: "Bill"}
 objects = {"tom@gmail.com": "Tom", "bob@gmai.com": "Bob", "sam@gmail.com": "Sam"}
 objects = {1: "Tom", "2": True, 3: 100.6}
 
+objects = {'age':9,'name':'Vano'}
+age,name = itemgetter('age', 'name')(objects)
+print('Destruction:',age,name)
+ 
 # создание из списка
 users_list = [
     ["+111123455", "Tom"],
