@@ -19,7 +19,8 @@ objects = {1: "Tom", "2": True, 3: 100.6}
 # Присвоение по ключу
 objects["2"] = not objects["2"]
 objects[3] = objects[3] // 2
-print('Set dic',objects[3],objects["2"]) # 50.0 False
+objects["new key"] = True
+print('Set dic',objects[3],objects["2"],objects["new key"]) # 50.0 False True
 
 
 objects = {'age':9,'name':'Vano'}
