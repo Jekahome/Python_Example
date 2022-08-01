@@ -20,7 +20,11 @@ objects = {1: "Tom", "2": True, 3: 100.6}
 objects["2"] = not objects["2"]
 objects[3] = objects[3] // 2
 objects["new key"] = True
-print('Set dic',objects[3],objects["2"],objects["new key"]) # 50.0 False True
+objects["new dic"] = dict()
+objects["new dic"]["sub dic 1"] = list()
+objects["new dic"]["sub dic 1"].append(1);
+objects["new dic"]["sub dic 1"].append(3);
+print('Set dic',objects[3],objects["2"],objects["new key"],objects["new dic"]) # 50.0 False True {'sub dic 1': [1, 3]}
 
 
 objects = {'age':9,'name':'Vano'}
