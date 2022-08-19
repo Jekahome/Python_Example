@@ -3,6 +3,8 @@
 import socket
 '''
 https://docs.python.org/3/library/socket.html
+
+https://www.youtube.com/watch?v=8A4dqoGL62E&ab_channel=sentdex
 '''
 
 #первый параметр socket_family может быть AF_INET или AF_UNIX
