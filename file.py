@@ -2,9 +2,14 @@ import os # для работы с каталогами
 import sys 
 
 '''
-1. open
-2. read/write
-3. close
+1. open()
+2. read()/write()
+3. close()
+
+   truncate()
+   seek()
+   readline()
+   readlines()
 
 Flags:
     r - Read открывает существующий
@@ -29,7 +34,8 @@ def file_example(params):
 
       # Open
       resource = open("source/file_text",'a+')
-   
+      # изменить размер файла
+      resource.truncate(0)
       # или так (сам закроет файл)
       #with open("file_text",'ar',encoding="utf8") as resource:
       #  text = resource.read()
