@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import multiprocessing as mp  # https://docs.python.org/3/library/multiprocessing.html
 import os
 

@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 class Person:  
      static_attr = 'static attr'
      private_static_attr = 'private attr'

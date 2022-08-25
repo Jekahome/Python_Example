@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 # Построение графиков в Python при помощи Matplotlib
 # https://python-scripts.com/matplotlib
 # python -mpip install -U matplotlib

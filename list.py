@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 # Список (массив)
 numbers = [] # len(numbers) == 0

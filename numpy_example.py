@@ -1,4 +1,5 @@
-
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import numpy as np
 # https://numpy.org/doc/stable/reference/generated/numpy.set_printoptions.html
 # https://machinelearningmastery.ru/the-ultimate-beginners-guide-to-numpy-f5a2f99aef54/
