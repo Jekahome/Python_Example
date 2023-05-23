@@ -193,7 +193,7 @@ else:
     print("Привет")
     print("мир")
 
-
+# Цикл while, for
 # Цикл while -----------------------------------------------------------------------------------------------------------------------
 number = 1
 while number < 5:
@@ -217,6 +217,20 @@ for c in message:
         break
     else:
         continue
+# Метод доступа к индексу элементов в цикле for
+my_list = [3, 5, 4, 2, 2, 5, 5]
+
+for index in range(len(my_list)):
+    print(index, my_list[index], end = "\n")
+
+
+for index, value in enumerate(my_list, start=0): 
+    print(list((index, value))) 
+
+
+print ("Indices and values in my_list:") 
+for index, value in zip(range(len(my_list)), my_list):
+    print((index, value)) # (0, 3) (1, 5) ...
 
 # Видимость глобальная и локальная -------------------------------------------------------------------------------------------------
 # nonlocal идентификатор видимости от уровня выше
