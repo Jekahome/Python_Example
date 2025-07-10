@@ -5,6 +5,14 @@ from decimal import Decimal # Для корректной работы с дро
 import locale # модуль локализации
 locale.setlocale(locale.LC_ALL, "")
 
+'''
+    bool
+    int
+    float
+    complex
+    str
+'''
+
 # bool --------------------------------------------------------------------------------------------------
 isMarried = False # False True
 isMarried = not 10 > 21 and 10 == 10 or 10 > 9
@@ -203,7 +211,10 @@ sub_string3 = string[2:9:2]
 print(sub_string3)      # lowr
 
 
-
+# replace
+txt = "... ... was a race horse, two two was ... too."
+x = txt.replace("...", "***",2)
+print(x) # *** *** was a race horse, two two was ... too.
 
 # Неявные преобразования  --------------------------------------------------------------------------------------------------
 # 1 complex

@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import unittest
 from base import add,input_exam
 from base_types.types import types_add

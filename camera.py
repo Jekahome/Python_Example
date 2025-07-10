@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import cv2 
 '''
     захват видео
@@ -14,6 +16,6 @@ else:
 while rval: 
     cv2.imshow("preview", frame) 
     rval, frame = vc.read() 
-    key = cv2.waitKey(20) 
-    if key == 27: # exit on ESC break 
+    key = cv2.waitKey(1) # 1 ms delay
+    if key == 'q' or key == 27: # exit on ESC break 
         cv2.destroyWindow("preview")

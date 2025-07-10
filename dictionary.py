@@ -7,12 +7,30 @@ items
 keys
 values
 '''
+from operator import itemgetter
+
+
 objects = dict()
 objects = {}
 objects = {1: "Tom", 2: "Bob", 3: "Bill"}
 objects = {"tom@gmail.com": "Tom", "bob@gmai.com": "Bob", "sam@gmail.com": "Sam"}
 objects = {1: "Tom", "2": True, 3: 100.6}
 
+# Присвоение по ключу
+objects["2"] = not objects["2"]
+objects[3] = objects[3] // 2
+objects["new key"] = True
+objects["new dic"] = dict()
+objects["new dic"]["sub dic 1"] = list()
+objects["new dic"]["sub dic 1"].append(1);
+objects["new dic"]["sub dic 1"].append(3);
+print('Set dic',objects[3],objects["2"],objects["new key"],objects["new dic"]) # 50.0 False True {'sub dic 1': [1, 3]}
+
+
+objects = {'age':9,'name':'Vano'}
+age,name = itemgetter('age', 'name')(objects)
+print('Destruction:',age,name)
+ 
 # создание из списка
 users_list = [
     ["+111123455", "Tom"],

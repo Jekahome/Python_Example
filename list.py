@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 # Список (массив)
 numbers = [] # len(numbers) == 0
@@ -141,3 +143,29 @@ for person in people:
         print(item, end=" | ")
 
 
+# Использование списков
+my_list = [1, 2, 3, 4, 5]
+my_list_squared = [m*m for m in my_list]
+print(my_list_squared) # [1, 4, 9, 16, 25]
+
+my_list = [3, 5, 4, 2, 2, 5, 5]
+print([list((i, my_list[i])) for i in range(len(my_list))]) # [[0, 3], [1, 5], [2, 4], [3, 2], [4, 2], [5, 5], [6, 5]]
+
+
+list_a = [1, 2, 3]
+list_b = ['A', 'B', 'C']
+for elem1,elem2 in zip(list_a,list_b):
+    print((elem1,elem2)) # (1, 'A') (2, 'B') (3, 'C')
+
+
+my_list = [3, 5, 4, 2, 2, 5, 5]
+print ("Indices and values in my_list:") 
+for index, value in zip(range(len(my_list)), my_list):
+    print((index, value)) # (0, 3) (1, 5) ...
+
+
+
+
+
+
+ 

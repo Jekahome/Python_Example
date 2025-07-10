@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 '''
 В Python есть следующие базовые типы исключений:
 
@@ -23,6 +25,16 @@
     и.т.д ...
 
 '''
+import sys, os
+
+try:
+    raise NotImplementedError("No error")
+except Exception as e:
+    exc_type, exc_obj, exc_tb = sys.exc_info()
+    fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+    print(exc_type, fname, exc_tb.tb_lineno) # <class 'NotImplementedError'> error.py 29
+
+
 try:
     number = int("tyy")
     if number == 0:
